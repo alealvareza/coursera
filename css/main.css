@@ -8,6 +8,7 @@
     color: limegreen;
     background-color: lightcyan;
     width: 100%;
+    border-radius: 0px;
     /*position: absolute;*/
     /*left: 0;*/
     /*bottom: 0;*/
@@ -25,7 +26,7 @@
 }
 
 .card-hotel{
-    flex: 1 150px;
-    padding: 2px 5px 2px 5px;
+    flex: 1 200px;
+    /*padding: 2px 0px 2px 0px;*/
     margin-top: 10px;
 }
