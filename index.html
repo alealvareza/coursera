@@ -90,7 +90,9 @@
                 <h5 class="card-title">Hotel Barcelona</h5>
                 <h6 class="card-subtitle text-muted">España</h6>
                 <p class="card-text">Ubicado en Barcelona a pocos metros de la playa.</p>
-                <button type="button" class="btn btn-online-success" data-toggle="modal" data-target="#contacto">Contacto</button>
+                <button type="button" class="btn btn-online-success" data-toggle="modal" data-target="#contacto">
+                    Contacto
+                </button>
             </div>
             <div>
                 <button class="btn btn-reserva"><span class="oi oi-plus"></span>
@@ -100,11 +102,14 @@
         </div>
         <div class="card card-hotel d-flex flex-column justify-content-between ml-2">
             <div class="card-body">
-                <h5 class="card-title">Hotel Buenos Aires</h5>
+                <h5 class="card-title" data-toggle="tooltip" data-placement="top"
+                    title="Las primeras reservas cuentan con clases de tango gratis!">Hotel Buenos Aires</h5>
                 <h6 class="card-subtitle text-muted">Argentina</h6>
                 <img class="card-img-top" src="./imagenes/hoteles.jpg" alt="Resposive image">
                 <p class="card-text">Ubicado en el centro.</p>
-                <button type="button" class="btn btn-online-success" data-toggle="modal" data-target="#contacto">Contacto</button>
+                <button type="button" class="btn btn-online-success" data-toggle="modal" data-target="#contacto">
+                    Contacto
+                </button>
             </div>
             <div>
                 <button class="btn btn-reserva"><span class="oi oi-plus"></span>
@@ -118,7 +123,9 @@
                 <h6 class="card-subtitle text-muted">Perú</h6>
                 <img class="card-img-top" src="./imagenes/hoteles.jpg" alt="Resposive image">
                 <p class="card-text">Ubicado en el centro.</p>
-                <button type="button" class="btn btn-online-success" data-toggle="modal" data-target="#contacto">Contacto</button>
+                <button type="button" class="btn btn-online-success" data-toggle="modal" data-target="#contacto">
+                    Contacto
+                </button>
             </div>
             <div>
                 <button class="btn btn-reserva"><span class="oi oi-plus"></span>
@@ -132,7 +139,9 @@
                 <h6 class="card-subtitle text-muted">Brasil</h6>
                 <img class="card-img-top" src="./imagenes/hoteles.jpg" alt="Resposive image">
                 <p class="card-text">Ubicado en el centro de Río de Janeiro a pocos metros de la playa.</p>
-                <button type="button" class="btn btn-online-success" data-toggle="modal" data-target="#contacto">Contacto</button>
+                <button type="button" class="btn btn-online-success" data-toggle="modal" data-target="#contacto">
+                    Contacto
+                </button>
             </div>
             <div>
                 <button class="btn btn-reserva"><span class="oi oi-plus"></span>
@@ -146,7 +155,9 @@
                 <h6 class="card-subtitle text-muted">Bolivia</h6>
                 <img class="card-img-top" src="./imagenes/hoteles.jpg" alt="Resposive image">
                 <p class="card-text">Ubicado en el puro centro.</p>
-                <button type="button" class="btn btn-online-success" data-toggle="modal" data-target="#contacto">Contacto</button>
+                <button type="button" class="btn btn-online-success" data-toggle="modal" data-target="#contacto">
+                    Contacto
+                </button>
             </div>
             <div>
                 <button class="btn btn-reserva"><span class="oi oi-plus"></span>
@@ -160,7 +171,9 @@
                 <h6 class="card-subtitle text-muted">España</h6>
                 <img class="card-img-top" src="./imagenes/hoteles.jpg" alt="Resposive image">
                 <p class="card-text">Ubicado en el puro centro.</p>
-                <button type="button" class="btn btn-online-success" data-toggle="modal" data-target="#contacto">Contacto</button>
+                <button type="button" class="btn btn-online-success" data-toggle="modal" data-target="#contacto">
+                    Contacto
+                </button>
             </div>
             <div>
                 <button class="btn btn-reserva"><span class="oi oi-plus"></span>
@@ -174,17 +187,21 @@
                 <h6 class="card-subtitle text-muted">Brasil</h6>
                 <img class="card-img-top" src="./imagenes/hoteles.jpg" alt="Resposive image">
                 <p class="card-text">Ubicado en el puro centro.</p>
-                <button type="button" class="btn btn-online-success" data-toggle="modal" data-target="#contacto">Contacto</button>
+                <button type="button" class="btn btn-online-success" data-toggle="modal" data-target="#contacto">
+                    Contacto
+                </button>
             </div>
             <div>
-                <button class="btn btn-success" type="button"><span class="oi oi-plus"></span>
+                <button class="btn btn-reserva" type="button" data-toggle="popover" title="Promociones"
+                        data-content="Consultá las promociones vigentes"><span class="oi oi-plus"></span>
                     Reservar
                 </button>
             </div>
         </div>
     </div>
 
-    <div class="modal fade" id="contacto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="contacto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -211,8 +228,8 @@
             </div>
         </div>
     </div>
-
 </div>
+
 
 <footer>
     <div class="row footer">
@@ -243,6 +260,13 @@
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
 <script src="node_modules/popper.js/dist/popper.min.js"></script>
 <script type="application/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="application/javascript" src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+<script>
+    $(function(){
+        $("[data-toggle='tooltip']").tooltip();
+        $("[data-toggle='popover']").popover();
+        });
+</script>
 
 </body>
 </html>
