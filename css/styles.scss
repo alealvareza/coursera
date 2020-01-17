@@ -1,30 +1,34 @@
-$green: #6bf48d;
+$orange: #FF8E36;
+$orange2: #FFD9BC;
+$cyan: #005e57;
 
 @mixin margenes($top, $bottom){
   margin-top: $top;
   margin-bottom: $bottom;
 }
 
+@mixin padding($top, $bottom){
+  padding-top: $top;
+  padding-bottom: $bottom;
+}
+
 .jumbotron{
-  background-color: $green;
+  background-color: $orange;
   color: black;
-  @include margenes(50px, 10px);
 }
 
 .btn{
-  color: $green;
-  background-color: lightcyan;
+  color: $cyan;
+  background-color: $orange2;
   width: 100%;
   border-radius: 0px;
-  /*position: absolute;*/
-  /*left: 0;*/
-  /*bottom: 0;*/
 }
 
 footer{
   padding: 10px 10px 0 10px;
-  background-color: $green;
+  background-color: $orange;
   @include margenes(10px, 0px);
+  color: darkblue;
 }
 
 .footer-address-icon{
@@ -33,19 +37,22 @@ footer{
 
 .card-hotel{
   flex: 1 200px;
-  /*padding: 2px 0px 2px 0px;*/
-  margin-top: 10px;
   @include margenes(10px, 0px);
 }
 
+.card-img-top{
+  height: 150px;
+}
+
 .img-index{
-  padding-bottom: 1rem;
+  @include padding(0rem, 1rem);
   width: 100%;
   height: 300px;
 }
 
+
 .tab-content{
-  padding-top: 10px;
+  @include padding(10px, 0px);
 }
 
 .d-block{
