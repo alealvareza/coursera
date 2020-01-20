@@ -6,8 +6,13 @@
   color: #005e57;
   background-color: #FFD9BC;
   width: 100%;
+  border-radius: 0px; }
+
+.btn2 {
+  background-color: antiquewhite;
   border-radius: 0px;
-  vertical-align: center; }
+  color: #005e57;
+  width: 70%; }
 
 footer {
   padding: 10px 10px 0 10px;
