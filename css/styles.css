@@ -8,18 +8,18 @@
   width: 100%;
   border-radius: 0px; }
 
-.btn2 {
-  background-color: antiquewhite;
-  border-radius: 0px;
-  color: #005e57;
-  width: 70%; }
-
 footer {
   padding: 10px 10px 0 10px;
   background-color: #FF8E36;
   margin-top: 10px;
   margin-bottom: 0px;
   color: darkblue; }
+  footer .yellow {
+    color: yellow; }
+  footer .blue {
+    color: blue; }
+  footer .green {
+    color: green; }
 
 .footer-address-icon {
   padding-right: 10px; }

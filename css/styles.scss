@@ -24,11 +24,23 @@ $cyan: #005e57;
   border-radius: 0px;
 }
 
-footer{
+footer {
   padding: 10px 10px 0 10px;
   background-color: $orange;
   @include margenes(10px, 0px);
   color: darkblue;
+
+  .yellow {
+    color: yellow;
+  }
+
+  .blue {
+    color: blue;
+  }
+
+  .green {
+    color: green;
+  }
 }
 
 .footer-address-icon{

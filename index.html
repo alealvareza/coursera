@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- build:css dist/index.css -->
+    <!-- build:css css/index.css -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="node_modules/open-iconic/font/css/open-iconic-bootstrap.min.css">
@@ -26,7 +26,6 @@
             <li class="nav-item active"><a class="nav-link" href="#">Inicio</a></li>
             <li class="nav-item"><a class="nav-link" href="./about.html">Nosotros</a></li>
             <li class="nav-item"><a class="nav-link" href="./prices.html">Precios</a></li>
-            <li class="nav-item"><a class="nav-link" href="./condition.html">Términos y Condiciones</a></li>
             <li class="nav-item"><a class="nav-link" href="./contact.html">Contacto</a></li>
         </ul>
     </div>
@@ -102,7 +101,6 @@
             <span class="sr-only">Siguiente</span>
         </a>
     </div>
-
     <div class="d-flex flex-wrap flex-row-reverse">
         <div class="card card-hotel d-flex flex-column justify-content-between ml-2">
             <img class="card-img-top" src="./imagenes/hotelFour.jpg" alt="Resposive image">
@@ -181,7 +179,6 @@
             </div>
         </div>
     </div>
-
     <div class="modal fade" id="contacto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
          aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -223,16 +220,15 @@
         <div class="col-sm-4 d-flex flex-column">
             <h2>Oficinas Centrales</h2>
             <address>
-                <p><span class="oi oi-home footer-address-icon"></span>Costa Rica, San José</p>
-                <p><span class="oi oi-phone footer-address-icon"></span>+506 2236 5478</p>
-                <p><span class="oi oi-inbox footer-address-icon"></span>contacto@guiahoteles.com</p>
+                <p class="yellow"><span class="oi oi-home footer-address-icon"></span>Costa Rica, San José</p>
+                <p class="blue"><span class="oi oi-phone footer-address-icon"></span>+506 2236 5478</p>
+                <p class="green"><span class="oi oi-inbox footer-address-icon"></span>contacto@guiahoteles.com</p>
             </address>
         </div>
         <div class="col-sm-4 d-flex flex-column align-items-end">
             <a href="#">Inicio</a>
             <a href="./about.html">Nosotros</a>
             <a href="./prices.html">Precios</a>
-            <a href="./condition.html">Términos y Condiciones</a>
             <a href="./contact.html">Contacto</a>
         </div>
     </div>
@@ -240,37 +236,12 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <!-- build:js dist/index.js -->
+    <!-- build:js js/main.js -->
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script type="application/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="application/javascript" src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    <script>
-        $(function () {
-            $("[data-toggle='tooltip']").tooltip();
-            $("[data-toggle='popover']").popover();
-            $('.carousel').carousel({
-                interval: 2000
-            });
-            $('#contacto').on('show.bs.modal', function (e) {
-                console.log('El model se está mostrando');
-
-                $('#contactoBtn').removeClass('btn');
-                $('#contactoBtn').addClass('btn-primary');
-                $('#contactoBtn').prop('disabled', true);
-            });
-            $('#contacto').on('shown.bs.modal', function (e) {
-                console.log('El model se mostró');
-            });
-            $('#contacto').on('hide.bs.modal', function (e) {
-                console.log('El model se oculta');
-            });
-            $('#contacto').on('hidden.bs.modal', function (e) {
-                console.log('El model se ocultó');
-                $('#contactoBtn').prop('disabled', false);
-            });
-        });
-    </script>
+    <script src="js/index.js"></script>
     <!-- endbuild -->
 </body>
 </html>
