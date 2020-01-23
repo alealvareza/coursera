@@ -5,10 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
+    <!-- build:css dist/index.css -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="node_modules/open-iconic/font/css/open-iconic-bootstrap.min.css">
+    <!-- endbuild -->
 
     <title>Guía Hoteles</title>
 </head>
@@ -237,38 +238,39 @@
     </div>
 </footer>
 
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="node_modules/jquery/dist/jquery.min.js"></script>
-<script src="node_modules/popper.js/dist/popper.min.js"></script>
-<script type="application/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-<script type="application/javascript" src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-<script>
-    $(function () {
-        $("[data-toggle='tooltip']").tooltip();
-        $("[data-toggle='popover']").popover();
-        $('.carousel').carousel({
-            interval: 2000
-        });
-        $('#contacto').on('show.bs.modal', function (e) {
-            console.log('El model se está mostrando');
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- build:js dist/index.js -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script type="application/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="application/javascript" src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script>
+        $(function () {
+            $("[data-toggle='tooltip']").tooltip();
+            $("[data-toggle='popover']").popover();
+            $('.carousel').carousel({
+                interval: 2000
+            });
+            $('#contacto').on('show.bs.modal', function (e) {
+                console.log('El model se está mostrando');
 
-            $('#contactoBtn').removeClass('btn');
-            $('#contactoBtn').addClass('btn-primary');
-            $('#contactoBtn').prop('disabled', true);
+                $('#contactoBtn').removeClass('btn');
+                $('#contactoBtn').addClass('btn-primary');
+                $('#contactoBtn').prop('disabled', true);
+            });
+            $('#contacto').on('shown.bs.modal', function (e) {
+                console.log('El model se mostró');
+            });
+            $('#contacto').on('hide.bs.modal', function (e) {
+                console.log('El model se oculta');
+            });
+            $('#contacto').on('hidden.bs.modal', function (e) {
+                console.log('El model se ocultó');
+                $('#contactoBtn').prop('disabled', false);
+            });
         });
-        $('#contacto').on('shown.bs.modal', function (e) {
-            console.log('El model se mostró');
-        });
-        $('#contacto').on('hide.bs.modal', function (e) {
-            console.log('El model se oculta');
-        });
-        $('#contacto').on('hidden.bs.modal', function (e) {
-            console.log('El model se ocultó');
-            $('#contactoBtn').prop('disabled', false);
-        });
-    });
-</script>
-
+    </script>
+    <!-- endbuild -->
 </body>
 </html>
