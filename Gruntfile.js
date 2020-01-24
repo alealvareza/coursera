@@ -1,4 +1,5 @@
 module.exports = function (grunt) {
+
     require('time-grunt')(grunt);
     require('jit-grunt')(grunt, {
         useminPrepare: 'grunt-usemin'
@@ -24,7 +25,7 @@ module.exports = function (grunt) {
 
         browserSync: {
             dev: {
-                bdFiles: { //browser files
+                bsFiles: {
                     src: [
                         'css/*.css',
                         '*.html',
@@ -32,20 +33,20 @@ module.exports = function (grunt) {
                     ]
                 },
                 options: {
-                    watchTasks: true,
+                    watchTask: true,
                     server: {
-                        baseDir: './' //Directorio base para nuestro servidor
+                        baseDir: './'
                     }
                 }
             }
         },
 
         imagemin: {
-            dynamin: {
+            dynamic: {
                 files: [{
                     expand: true,
                     cwd: './',
-                    src: 'imagenes/*.{png,gif,jpg,jpeg}',
+                    src: 'images/*.{png,gif,jpg,jpeg}',
                     dest: 'dist/'
                 }]
             }
@@ -61,15 +62,6 @@ module.exports = function (grunt) {
                     dest: 'dist'
                 }]
             },
-            fonts: {
-                files: [{
-                    expand: true,
-                    dot: true,
-                    cwd: 'node_modules/open-iconic/font',
-                    src: ['fonts/*.*'],
-                    dest: 'dist'
-                }]
-            }
         },
 
         clean: {
@@ -88,18 +80,16 @@ module.exports = function (grunt) {
 
         filerev: {
             options: {
-                encoding: 'utf8',
+                enconding: 'utf8',
                 algorithm: 'md5',
                 length: 20
             },
 
             release: {
-                //filerev: release hashes (md5) all assets (images, js and css)
-                // in dist directory.
                 files: [{
                     src: [
                         'dist/js/*.js',
-                        'dist/css/*.css',
+                        'dist/css/*.css'
                     ]
                 }]
             }
@@ -115,7 +105,7 @@ module.exports = function (grunt) {
         useminPrepare: {
             foo: {
                 dest: 'dist',
-                src: ['index.html', 'about.html', 'contact.html', 'prices.html']
+                src: ['index.html', 'about.html', 'precios.html', 'contacto.html']
             },
             options: {
                 flow: {
@@ -137,20 +127,26 @@ module.exports = function (grunt) {
                     }
                 }
             }
+
         },
 
         usemin: {
-            html: ['dist/index.html', 'dist/about.html', 'dist/contact.html', 'dist/prices.html'],
+            html: ['dist/index.html', 'dist/about.html', 'dist/precios.html', 'dist/contacto.html'],
             options: {
-                assertsDir: ['dist', 'dist/css', 'dist/js']
+                assetsDir:['dist', 'dist/css', 'dist/js']
             }
         }
+
     });
 
+    //grunt.loadNpmTasks('grunt-contrib-watch');
+    //grunt.loadNpmTasks('grunt-contrib-sass');
+    //grunt.loadNpmTasks('grunt-browser-sync');
+    //grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.registerTask('css', ['sass']);
     grunt.registerTask('default', ['browserSync', 'watch']);
     grunt.registerTask('img:compress', ['imagemin']);
-    grunt.registerTask('buid', [
+    grunt.registerTask('build', [
         'clean',
         'copy',
         'imagemin',
@@ -160,5 +156,6 @@ module.exports = function (grunt) {
         'uglify',
         'filerev',
         'usemin'
-    ]);
+    ])
+
 };
