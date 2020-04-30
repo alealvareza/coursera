@@ -54,7 +54,7 @@
   "dependencies": {
     "bootstrap": "^4.4.1",
     "concurrently": "^5.0.2",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "less": "^3.10.3",
     "node-sass": "^4.13.1",
     "open-iconic": "^1.1.1",
